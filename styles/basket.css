@@ -1,0 +1,59 @@
+.basket-wrapper {
+    height: 100%;
+    z-index: 5;
+
+    .basket-content {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(54, 53, 52, 1);
+        width: 300px;
+        height: 600px;
+        position: sticky;
+        top: 0;
+        border-radius: 20px;
+        padding: 50px;
+        z-index: 6;
+
+        h2 {
+            color: rgba(253, 234, 220, 1);
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: Palanquin;
+            font-size: 32px;
+        }
+
+        #order-content {
+            background-color: rgb(73, 72, 72);
+            height: 300px;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 20px;
+        }
+
+        .buy-btn {
+            width: 100%;
+            margin-top: 30px;
+            background-color: rgba(231, 108, 31, 1);
+            color: white;
+        }
+    }
+}
+
+td {
+    width: 100%;
+    font-family: Palanquin;
+    color: rgba(255, 255, 255, 1);
+}
+
+tr{
+    width: 100%;
+}
+
+.total {
+    border-top: 1px solid white;
+}
+
+table {
+    height: fit-content;
+    border-collapse: collapse;
+}

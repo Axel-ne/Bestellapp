@@ -1,0 +1,93 @@
+.card-content-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    height: 60px;
+    /* width: calc(100% + 330px); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(231, 108, 31, 1);
+    margin-bottom: 50px;
+
+    h2 {
+        text-align: center;
+        color: white;
+        font-family: Palanquin;
+        font-size: 32px;
+    }
+}
+
+.card-content {
+    background-color: rgba(253, 234, 220, 1);
+    height: 300px;
+    width: 310px;
+    border-radius: 16px;
+    padding: 20px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.card-name {
+    font-family: Palanquin;
+    font-size: 20px;
+    color: rgba(54, 53, 52, 1);
+    font-weight: 600;
+}
+
+.card-description {
+    font-family: Palanquin;
+    color: rgba(54, 53, 52, 1);
+    font-weight: 600;
+}
+
+.card-price {
+    font-family: Palanquin;
+    color: rgba(54, 53, 52, 1);
+    font-size: 24px;
+}
+
+.card-price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100px;
+    position: absolute;
+    bottom: 30px;
+    gap: 90px;
+}
+
+.close-btn-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(54, 53, 52, 1);
+    color: white;
+}
+
+button {
+    width: 115px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    font-family: Palanquin;
+    font-weight: 600;
+}
+
+button:hover {
+    color: rgba(231, 108, 31, 1);
+}

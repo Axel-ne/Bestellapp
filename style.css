@@ -1,0 +1,137 @@
+.header-content {
+    height: 8dvh;
+    background-color: rgba(231, 108, 31, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        margin-left: 20px;
+    }
+}
+
+.landing-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.landing-content {
+    
+    img {
+        width: 300px;
+        border-radius: 20px;
+    }
+}
+
+.burger-icon {
+    bottom: 70px;
+    left: 90px;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 120px;
+    }
+}
+
+.evaluation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.evaluation-content {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 110px;
+    background-color: rgba(250, 202, 172, 1);
+    border-radius: 16px;
+
+    .star-vote {
+        color: rgba(54, 53, 52, 1);
+        font-family: Palanquin Dark;
+        font-size: 20px;
+    }
+
+    p {
+        color: rgba(114, 109, 109, 1);
+        font-family: Palanquin;
+    }
+}
+
+.burger-span {
+    color: rgba(231, 108, 31, 1);
+}
+
+.burger-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 120px;
+
+    h2 {
+        font-family: Palanquin Dark;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    p {
+        font-family: Palanquin;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+    }
+}
+
+.content-section{
+    width: 100%;
+    display: flex;
+}
+
+#burger-container {
+    width: 100%;
+}
+
+.genre-img {
+    position: absolute;
+    bottom: 40px;
+}
+
+.menu-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(231, 108, 31, 1);
+
+    p {
+        color: white;
+        text-align: center;
+        font-family: Palanquin;
+    }
+}
+
+.nav-bar {
+    height: 8dvh;
+    background-color: rgba(54, 53, 52, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

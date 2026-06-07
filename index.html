@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestellapp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/assets.css">
+    <link rel="stylesheet" href="./styles/basket.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/media-querrys.css">
+    <link rel="stylesheet" href="./styles/standart.css">
+    <link rel="stylesheet" href="./styles/card.css">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/Ellipse 16@2x.png">
+    <script src="./scripts/db.js"></script>
+    <script src="./scripts/template.js"></script>
+    <script src="main.js"></script>
+
+<body onload="init()">
+    <header>
+        <div class="header-content">
+            <img src="./assets/icons/Frame 92.png" alt="">
+        </div>
+    </header>
+    <main>
+        <section class="landing-section">
+            <div class="landing-content">
+                <img src="./assets/imgs/7b6fcc1a210736defb76fc907e5fd1930d8c0c6f.jpg" alt="">
+                <div class="burger-icon">
+                    <img src="./assets/icons/Ellipse 16@2x.png" alt="">
+                </div>
+            </div>
+            <section class="evaluation-section">
+                <div class="evaluation-content">
+                    <img src="./assets/icons/star.png" alt="">
+                    <p class="star-vote">4,1</p>
+                    <p>(317)</p>
+                </div>
+                <div class="burger-description">
+                    <h2><span class="burger-span">Burger</span>House</h2>
+                    <p>The best of Burgers, Pizza, and Greens, all in one great place.</p>
+                </div>
+            </section>
+        </section>
+        <section class="content-section">
+            <section id="burger-container">
+
+            </section>
+            <section id="basket" class="basket-section"></section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>Imprint</p>
+            <p>Cookie Preferences</p>
+            <p>©️ 2025 BurgerHouse</p>
+        </div>
+    </footer>
+    <nav>
+        <div class="nav-bar">
+            <a href=""><img src="./assets/icons/Home.png" alt=""></a>
+            <a href=""><img src="./assets/icons/Profile.png" alt=""></a>
+            <a href=""><img src="./assets/icons/orders.png" alt=""></a>
+            <a class="shopping-cart" href=""><img onclick="renderBasket()" src="./assets/icons/Property 1=default.png" alt=""></a>
+        </div>
+    </nav>
+</body>
+
+</html>
