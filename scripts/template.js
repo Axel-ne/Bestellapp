@@ -1,5 +1,3 @@
-
-
 function cardTemplate(dish, index) {
     if (dish.genre) {
         return /*html*/ `
@@ -22,33 +20,64 @@ function cardTemplate(dish, index) {
         </section> `;
 }
 
-function getBasketTemplate(){
-    return /*html*/`
+function getBasketTemplate(basketHTML, subtotal, deliveryFee, total) {
+    let orderContentHTML = basketHTML;
+    let basketSubtotal = subtotal ? subtotal.toFixed(2).replace(".", ",") : "0,00";
+    let displayDelivery = deliveryFee ? deliveryFee.toFixed(2).replace(".", ",") : "0,00";
+    let displayTotal = total ? total.toFixed(2).replace(".", ",") : "0,00";
+
+    return /*html*/ `
         <section class="basket-wrapper">
-                    <div class="basket-content">
-                        <div class="close-btn-wrapper">
-                            <button class="close-btn"></button>
-                        </div>
-                        <h2>Your Basket</h2>
-                        <div id="order-content"></div>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>Subtotal</td>
-                                    <td>36,70€</td>
-                                </tr>
-                                <tr>
-                                    <td>Delivery fee</td>
-                                    <td>4,99€</td>
-                                </tr>
-                                <tr class="total">
-                                    <td>Total</td>
-                                    <td>41,69€</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="buy-btn">Buy now</button>
-                    </div>
+            <div class="basket-content">
+                <div class="close-btn-wrapper">
+                    <!-- <button class="close-btn">X</button> -->
+                </div>
+                <h2>Your Basket</h2>
+                
+                <section id="order-content">
+                    ${orderContentHTML}
                 </section>
-    `
+                
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td>${basketSubtotal}€</td>
+                        </tr>
+                        <tr>
+                            <td>Delivery</td>
+                            <td>4,90€</td>
+                        </tr>
+                        <tr class="total">
+                            <td><strong>Total</strong></td>
+                            <td><strong>${displayTotal}€</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <button class="buy-btn">Buy now (${displayTotal})</button>
+            </div>
+        </section>
+    `;
+}
+
+function basketItemTemplate(dish, index, dishTotal) {
+    return /*html*/ `
+        <div class="basket-card">
+            <div class="basket-card-text">
+                <p><strong>${dish.name}</strong></p>
+                <button onclick="changeAmount(${index}, -${dish.amount})" class="conter-btn">🗑</button>
+            </div>
+            <div class="price-add-container">
+                <div>
+                    <p>${dishTotal.toFixed(2).replace(".", ",")}€</p>
+                </div>
+                <div class="basket-card-counter">
+                    <button onclick="changeAmount(${index}, 1)" class="conter-btn">+</button>
+                    <p>${dish.amount}</p>
+                    <button onclick="changeAmount(${index}, -1)" class="conter-btn">-</button>
+                </div>
+            </div>
+        </div>
+    `;
 }
