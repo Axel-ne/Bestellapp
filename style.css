@@ -1,3 +1,15 @@
+
+::-webkit-scrollbar {
+    background-color:transparent;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(231, 108, 31, 1);
+    border-radius: 10px;
+    width: 10px;
+}
+
 .header-content {
     height: 8dvh;
     background-color: rgba(231, 108, 31, 1);
@@ -16,11 +28,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
 .landing-content {
-    
     img {
         width: 300px;
         border-radius: 20px;
@@ -95,7 +105,7 @@
     }
 }
 
-.content-section{
+.content-section {
     width: 100%;
     display: flex;
 }
@@ -134,4 +144,49 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.basket-card {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(250, 202, 172, 1);
+    border-radius: 20px;
+    padding: 10px;
+
+    .basket-card-text {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .conter-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+    }
+
+    .basket-card-counter {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.price-add-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#order-content{
+    overflow-y: auto;
+}
+
+#order-content::-webkit-scrollbar{
+    width: 4px;
+}
+
+#order-content::-webkit-scrollbar-thumb{
+    background-color: rgba(231, 108, 31, 1);
 }

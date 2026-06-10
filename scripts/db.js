@@ -21,7 +21,8 @@ let myDishes = [
         imgs: "/assets/imgs/Frame 294 (2).png", 
         name: "Beef red burger",
         price: "14.90",
-        description: "Beef, Cheese, Tomatoes, Lettuce, Onion"
+        description: "Beef, Cheese, Tomatoes, Lettuce, Onion",
+        amount: 0,
     },
     {
         imgs: "/assets/imgs/Frame 294 (3).png", 
