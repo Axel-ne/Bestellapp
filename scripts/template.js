@@ -22,16 +22,20 @@ function cardTemplate(dish, index) {
 
 function getBasketTemplate(basketHTML, subtotal, deliveryFee, total) {
     let orderContentHTML = basketHTML;
-    let basketSubtotal = subtotal ? subtotal.toFixed(2).replace(".", ",") : "0,00";
-    let displayDelivery = deliveryFee ? deliveryFee.toFixed(2).replace(".", ",") : "0,00";
+    let basketSubtotal = subtotal
+        ? subtotal.toFixed(2).replace(".", ",")
+        : "0,00";
+    let displayDelivery = deliveryFee
+        ? deliveryFee.toFixed(2).replace(".", ",")
+        : "0,00";
     let displayTotal = total ? total.toFixed(2).replace(".", ",") : "0,00";
 
     return /*html*/ `
         <section class="basket-wrapper">
             <div class="basket-content">
                 <div class="close-btn-wrapper">
-                    <!-- <button class="close-btn">X</button> -->
-                </div>
+    <button onclick="toggleBasket()">✕</button>
+</div>
                 <h2>Your Basket</h2>
                 
                 <section id="order-content">
@@ -55,7 +59,7 @@ function getBasketTemplate(basketHTML, subtotal, deliveryFee, total) {
                     </tbody>
                 </table>
                 
-                <button class="buy-btn">Buy now (${displayTotal})</button>
+                <button onclick="renderOrderDialog()" class="buy-btn">Buy now (${displayTotal})</button>
             </div>
         </section>
     `;
@@ -79,5 +83,22 @@ function basketItemTemplate(dish, index, dishTotal) {
                 </div>
             </div>
         </div>
+    `;
+}
+
+function orderDialog() {
+    return /*html*/ `
+        <dialog>
+            <div class="dialog-section">
+                <div class="dialog-btn-container">
+                    <button onclick="closeDialog()">X</button>
+                </div>
+                <div class="dialog-content">
+                    <img src="./assets/imgs/ChatGPT Image Nov 24, 2025, 11_51_33 AM 1.png" alt="">
+                    <h2>Order confirmed!</h2>
+                    <p>Your food is on the way!</p>
+                </div>
+            </div>
+        </dialog>
     `;
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">     
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestellapp</title>
     <link rel="stylesheet" href="style.css">
@@ -17,6 +17,7 @@
     <script src="./scripts/template.js"></script>
     <script src="main.js"></script>
 </head>
+
 <body onload="init()">
     <header>
         <div class="header-content">
@@ -49,12 +50,13 @@
             </section>
             <section id="basket" class="basket-section"></section>
         </section>
+        <div id="dialog-container"></div>
     </main>
     <footer>
         <div class="footer-content">
             <p>Imprint</p>
             <p>Cookie Preferences</p>
-            <p>©️ 2025 BurgerHouse</p>
+            <p>&copy; 2025 BurgerHouse</p>
         </div>
     </footer>
     <nav>
@@ -62,7 +64,12 @@
             <a href=""><img src="./assets/icons/Home.png" alt=""></a>
             <a href=""><img src="./assets/icons/Profile.png" alt=""></a>
             <a href=""><img src="./assets/icons/orders.png" alt=""></a>
-            <a class="shopping-cart" href=""><img onclick="renderBasket()" src="./assets/icons/Property 1=default.png" alt=""></a>
+            <div>
+                <a href="#" class="mobile-basket" onclick="toggleBasket(); return false;">
+                    <img src="./assets/icons/Property 1=default.png" alt="">
+                </a>
+                <span id="mobile-basket-badge" class="nav-badge has-items">1</span>
+            </div>
         </div>
     </nav>
 </body>
