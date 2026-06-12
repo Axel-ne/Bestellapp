@@ -46,40 +46,56 @@ function getBasketTemplate(basketHTML, subtotal, deliveryFee, total) {
                     <tbody>
                         <tr>
                             <td>Subtotal</td>
-                            <td>${basketSubtotal}€</td>
+                            <td id="subtotal"></td>
                         </tr>
                         <tr>
                             <td>Delivery</td>
-                            <td>4,90€</td>
+                            <td id="delivery"></td>
                         </tr>
                         <tr class="total">
                             <td><strong>Total</strong></td>
-                            <td><strong>${displayTotal}€</strong></td>
+                            <td id="total"><strong></strong></td>
                         </tr>
                     </tbody>
                 </table>
                 
-                <button onclick="renderOrderDialog()" class="buy-btn">Buy now (${displayTotal})</button>
+                <button onclick="renderOrderDialog()" id="buy-btn" class="buy-btn">Buy now (<span id="displayTotal"></span>)</button>
             </div>
         </section>
     `;
 }
 
-function basketItemTemplate(dish, index, dishTotal) {
-    return /*html*/ `
+function basketItemTemplate(dish, index, dishTotal ) {
+    return /*html*/`
         <div class="basket-card" id="basket-card-${index}">
             <div class="basket-card-text">
                 <p><strong>${dish.name}</strong></p>
-                <button onclick="changeAmount(${index}, -${dish.amount})" class="conter-btn">🗑</button>
+                <button
+                    onclick="removeItem(${index})"
+                    class="conter-btn">
+                    🗑
+                </button>
             </div>
             <div class="price-add-container">
                 <div>
-                    <p>${dishTotal.toFixed(2).replace(".", ",")}€</p>
+                    <p id="dishTotal${index}">${dishTotal
+                        .toFixed(2)
+                        .replace(".", ",")}€</p>
                 </div>
                 <div class="basket-card-counter">
-                    <button onclick="changeAmount(${index}, -1)" class="conter-btn">-</button>
-                    <p>${dish.amount}</p>
-                    <button onclick="changeAmount(${index}, 1)" class="conter-btn">+</button>
+                    <button
+                        onclick="minusAmount(${index})"
+                        class="conter-btn">
+                        -
+                    </button>
+                    <p id="countNumber${index}">
+                        ${dish.amount}
+                    </p>
+                    <button
+                        onclick="plusAmount(${index})"
+                        class="conter-btn">
+                        +
+                    </button>
                 </div>
             </div>
         </div>
