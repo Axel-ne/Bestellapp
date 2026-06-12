@@ -142,7 +142,24 @@
             width: 200px;
         }
     }
+
+.card-content-section{
+    .card-content{
+        width: 500px;
+    }
+}
+
 }
 
 @media screen and (min-width: 1200px) {
+    .card-content-section{
+    .card-content{
+        width: 800px;
+        height: 400px;
+    }
+}
+
+.card-price-wrapper{
+    width: 90%;
+}
 }

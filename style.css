@@ -9,13 +9,20 @@
     width: 10px;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(231, 108, 31, 1);
+}
+
 .header-content {
+    width: 100%;
     height: 8dvh;
     background-color: rgba(231, 108, 31, 1);
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    max-width: 900px;
     img {
         margin-left: 20px;
     }
@@ -273,4 +280,13 @@ dialog::backdrop {
 
 body:has(dialog[open]) {
     overflow: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.main-section {
+    width: 100%;
 }

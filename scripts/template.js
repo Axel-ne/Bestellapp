@@ -67,7 +67,7 @@ function getBasketTemplate(basketHTML, subtotal, deliveryFee, total) {
 
 function basketItemTemplate(dish, index, dishTotal) {
     return /*html*/ `
-        <div class="basket-card">
+        <div class="basket-card" id="basket-card-${index}">
             <div class="basket-card-text">
                 <p><strong>${dish.name}</strong></p>
                 <button onclick="changeAmount(${index}, -${dish.amount})" class="conter-btn">🗑</button>
@@ -77,9 +77,9 @@ function basketItemTemplate(dish, index, dishTotal) {
                     <p>${dishTotal.toFixed(2).replace(".", ",")}€</p>
                 </div>
                 <div class="basket-card-counter">
-                    <button onclick="changeAmount(${index}, 1)" class="conter-btn">+</button>
-                    <p>${dish.amount}</p>
                     <button onclick="changeAmount(${index}, -1)" class="conter-btn">-</button>
+                    <p>${dish.amount}</p>
+                    <button onclick="changeAmount(${index}, 1)" class="conter-btn">+</button>
                 </div>
             </div>
         </div>

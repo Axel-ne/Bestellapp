@@ -18,12 +18,12 @@ function addToBasket(index) {
         myDishes[index].amount++;
         renderBasket();
     }
-
 }
 
-function changeAmount(index, change) {
+function changeAmount(index, change, count) {
     myDishes[index].amount += change;
     if (myDishes[index].amount < 0) myDishes[index].amount = 0;
+    updateMobileBasketBadge(count);
     renderBasket();
 }
 
@@ -64,12 +64,12 @@ function renderOrderDialog() {
 
 function openDialog() {
     let dialog = document.querySelector("dialog");
-        dialog.showModal();
+    dialog.showModal();
 }
 
 function closeDialog() {
     let dialog = document.querySelector("dialog");
-        dialog.close();
+    dialog.close();
 }
 
 function updateMobileBasketBadge(count) {
@@ -87,4 +87,8 @@ function updateMobileBasketBadge(count) {
 function toggleBasket() {
     let basketRef = document.getElementById("basket");
     basketRef.classList.toggle("show-basket");
+}
+
+function updateBasket(){
+
 }
